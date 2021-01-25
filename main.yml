@@ -38,6 +38,8 @@
     - turn
   vars_files:
     - vars.yml
+  vars:
+    certbot_source: letsencrypt
   roles:
     - turn-standalone
     
@@ -73,7 +75,8 @@
     - bbb-2meet
     # TODO remove Docker from install process
     # removal of docker group makes problems if docker is reinstalled by gerlingguyscript in n0emis
-    - no-docker
+    - no-docker 
+    - bbb-easy-join
 
 - name: Collect BBB secrets
   hosts: bbb
