@@ -2,3 +2,4 @@
 tmp/
 !tmp/.gitkeep
 vault_password
+roles/galaxy/

@@ -1,90 +1,47 @@
 [all]
-nbg01.ulmlernt.org ansible_host=88.198.33.197
-nbg02.ulmlernt.org ansible_host=88.198.43.210
-nbg03.ulmlernt.org ansible_host=85.10.201.69
-nbg04.ulmlernt.org ansible_host=213.239.221.44
-nbg05.ulmlernt.org ansible_host=213.133.100.217
-fsn01.ulmlernt.org ansible_host=195.201.237.77
-fsn02.ulmlernt.org ansible_host=144.76.96.80
-fsn03.ulmlernt.org ansible_host=78.47.162.149
-fsn04.ulmlernt.org ansible_host=136.243.8.92
-fsn05.ulmlernt.org ansible_host=136.243.18.16
-fsn06.ulmlernt.org ansible_host=148.251.6.47
-fsn07.ulmlernt.org ansible_host=148.251.47.101
-fsn08.ulmlernt.org ansible_host=176.9.34.100
-fsn09.ulmlernt.org ansible_host=144.76.197.213
-fsn10.ulmlernt.org ansible_host=144.76.159.37
-fsn11.ulmlernt.org ansible_host=49.12.33.68
-fsn12.ulmlernt.org ansible_host=157.90.1.164
-fsn13.ulmlernt.org ansible_host=157.90.1.162
-fsn14.ulmlernt.org ansible_host=157.90.1.160
-fsn15.ulmlernt.org ansible_host=157.90.1.159
-fsn16.ulmlernt.org ansible_host=157.90.5.124
-fsn17.ulmlernt.org ansible_host=159.69.240.193
-fsn18.ulmlernt.org ansible_host=159.69.119.172
-fsn19.ulmlernt.org ansible_host=159.69.181.101
-fsn21.ulmlernt.org ansible_host=188.34.178.6
-fsn22.ulmlernt.org ansible_host=188.40.103.115
-fsn23.ulmlernt.org ansible_host=148.251.180.190
-fsn24.ulmlernt.org ansible_host=136.243.5.35
-fsn25.ulmlernt.org ansible_host=168.119.77.237
-fsn26.ulmlernt.org ansible_host=168.119.77.223
-fsn27.ulmlernt.org ansible_host=168.119.77.222
-bck.ulmlernt.org ansible_host=49.12.102.120
+video.bonis.info
+turn1.bonis.info
+turn2.bonis.info
+bbb1.bonis.info
+bbb2.bonis.info
+bbb3.bonis.info
+mon.bonis.info
 
-[dns]
-fsn01.ulmlernt.org
+#[dns]
+#xxx.bonis.info
 
 [bbb]
-nbg01.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-nbg02.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-nbg04.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-nbg05.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-fsn02.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-fsn04.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-fsn05.ulmlernt.org bbb_additional_turn_server="turn03.ulmlernt.org"
-fsn06.ulmlernt.org bbb_additional_turn_server="turn04.ulmlernt.org"
-fsn07.ulmlernt.org bbb_additional_turn_server="turn04.ulmlernt.org"
-fsn08.ulmlernt.org bbb_additional_turn_server="turn04.ulmlernt.org"
-fsn09.ulmlernt.org bbb_additional_turn_server="turn04.ulmlernt.org"
-fsn12.ulmlernt.org bbb_additional_turn_server="turn04.ulmlernt.org"
-fsn13.ulmlernt.org bbb_additional_turn_server="turn04.ulmlernt.org"
-fsn14.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn15.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn16.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn22.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn22.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn23.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn24.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn25.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn26.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
-fsn27.ulmlernt.org bbb_additional_turn_server="turn05.ulmlernt.org"
+bbb1.bonis.info bbb_additional_turn_server="turn1.bonis.info"
+bbb2.bonis.info bbb_additional_turn_server="turn1.bonis.info"
+bbb3.bonis.info bbb_additional_turn_server="turn1.bonis.info"
 
-[bbb_test_turn_ssl]
-nbg03.ulmlernt.org bbb_additional_turn_server="turn06.ulmlernt.org"
+#[bbb_test_turn_ssl]
+#nbg03.ulmlernt.org bbb_additional_turn_server="turn1.bonis"
 
-[bbb_test_turn_nossl]
-fsn10.ulmlernt.org bbb_additional_turn_server="turn06.ulmlernt.org"
+#[bbb_test_turn_nossl]
+#fsn10.ulmlernt.org bbb_additional_turn_server="turn9.bonis.info"
 
+# scalelite
 [loadbalancer]
-fsn01.ulmlernt.org nginx_domain_name="lb.ulmlernt.org"
+video.bonis.info nginx_domain_name="video.bonis.info"
+
+# greenlight
+[frontend]
+video.bonis.info gl_domain_name="video.bonis.info"
+
 
 [monitoring]
-fsn01.ulmlernt.org
+mon.bonis.info
 
-[frontend]
-fsn03.ulmlernt.org
-
-[backupstorage]
-bck.ulmlernt.org
+#[backupstorage]
+#bck.bonis.info
 
 [turn]
-fsn17.ulmlernt.org turn_hostname="turn03.ulmlernt.org"
-fsn18.ulmlernt.org turn_hostname="turn04.ulmlernt.org"
-fsn19.ulmlernt.org turn_hostname="turn05.ulmlernt.org"
+turn1.bonis.info turn_hostname="turn1.bonis.info"
+turn2.bonis.info turn_hostname="turn2.bonis.info"
 
-[turn_test]
-fsn21.ulmlernt.org turn_hostname="turn06.ulmlernt.org"
+#[turn_test]
+#fsn21.ulmlernt.org turn_hostname="turn9.bonis.info"
 
-[support]
-fsn11.ulmlernt.org
+#[support]
+#fsn11.ulmlernt.org
