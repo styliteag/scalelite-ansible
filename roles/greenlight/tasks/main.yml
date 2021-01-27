@@ -103,13 +103,31 @@
     name: greenlight
     enabled: yes
 
-- name: Ensure greenlight is started
-  systemd:
-    name: greenlight
-    state: started
-
 - name: Ensure greenlight nginx config exists
   template:
     src: nginx-greenlight.conf.j2
     dest: /etc/nginx/a13.d/greenlight.conf
   notify: reload nginx
+
+- name: Restart PostgreSQL Server of greenlight
+  service:
+     name: postgresql
+     state: restarted
+
+- name: Ensure greenlight nginx is restarted
+  service:
+    name: nginx
+    state: restarted
+
+- name: Ensure greenlight is started
+  systemd:
+    name: greenlight
+    state: started
+
+- name: Create greenlight admin user
+  shell:
+    chdir: /var/www/greenlight
+    executable: /bin/bash
+    cmd: "sleep 50; set -o allexport; source .env; set +o allexport; bundle exec rake user:create[{{ greenlight_admin_user | quote }},{{ greenlight_admin_email | quote }},{{ greenlight_admin_password | quote }},admin]"
+  become: yes
+  become_user: greenlight
