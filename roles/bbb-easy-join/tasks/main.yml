@@ -19,9 +19,9 @@
 
 - name: Checkout bbb-easy-join
   git:
-    repo: https://github.com/stadtulm/bbb-easy-join.git
+    repo: https://github.com/styliteag/bbb-easy-join.git
     dest: /var/www/bbb-easy-join
-    version: 4c0ac089753e331610ec7b1c0b43ef3cd55be430
+    version: 2meet
     force: yes
 
 - name: Ensure bbb-easy-join is owner of /var/www/bbb-easy-join

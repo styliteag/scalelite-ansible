@@ -15,10 +15,8 @@
 
 - name: Checkout greenlight repository
   git:
-    #repo: https://github.com/stadtulm/greenlight.git
     repo: https://github.com/bigbluebutton/greenlight.git
     dest: /var/www/greenlight
-    #version: ulmlernt
     version: release-2.7.18 
     force: yes
   notify: 
