@@ -303,7 +303,7 @@
         token_url: https://github.com/login/oauth/access_token
         api_url: https://api.github.com/user
         team_ids: ""
-        allowed_organizations: stadtulm
+        allowed_organizations: styliteag
   roles:
     - cloudalchemy.prometheus
     - prometheus-ufw

@@ -15,11 +15,6 @@ bbb1.bonis.info bbb_additional_turn_server="turn1.bonis.info"
 bbb2.bonis.info bbb_additional_turn_server="turn1.bonis.info"
 bbb3.bonis.info bbb_additional_turn_server="turn1.bonis.info"
 
-#[bbb_test_turn_ssl]
-#nbg03.ulmlernt.org bbb_additional_turn_server="turn1.bonis"
-
-#[bbb_test_turn_nossl]
-#fsn10.ulmlernt.org bbb_additional_turn_server="turn9.bonis.info"
 
 # scalelite
 [loadbalancer]
@@ -39,9 +34,3 @@ mon.bonis.info
 [turn]
 turn1.bonis.info turn_hostname="turn1.bonis.info"
 turn2.bonis.info turn_hostname="turn2.bonis.info"
-
-#[turn_test]
-#fsn21.ulmlernt.org turn_hostname="turn9.bonis.info"
-
-#[support]
-#fsn11.ulmlernt.org
