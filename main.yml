@@ -1,4 +1,9 @@
 ---
+
+# Requirements:
+# ansible-galaxy install -r requirements.yml --roles-path roles/galaxy
+#
+
 - name: Basic Setup
   hosts: all
   become: yes
