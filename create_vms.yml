@@ -1,0 +1,48 @@
+---
+
+- name: Create a VM all VMs
+  hosts: localhost
+  connection: local
+  vars_files:
+  - vms.yml
+  - vars.yml
+  gather_facts: no
+  tasks:
+  - name: Clone the template
+    vmware_guest:
+      hostname: '{{ vcenter_hostname }}'
+      username: '{{ vcenter_username }}'
+      password: '{{ vcenter_password }}'
+      validate_certs: False
+      datacenter: '{{ vcenter_datacenter }}'
+      folder: '{{ vcenter_folder }}'
+      datastore: '{{ vcenter_datastore }}'
+      state: poweredon
+      wait_for_ip_address: yes
+      name: "{{item.value.vmname}}" 
+      template: '{{ item.value.template }}'
+      hardware:
+        memory_mb: "{{ item.value.mem }}"
+        num_cpus:  "{{ item.value.cpus }}"
+        num_cpu_cores_per_socket: 1
+        hotadd_cpu: True
+        hotremove_cpu: True
+        hotadd_memory: True
+      networks:
+      - name: "{{item.value.netname}}"
+        type: static
+        start_connected: True
+        ip: "{{item.value.ip}}"
+        netmask: "{{item.value.netmask}}"
+        gateway: "{{item.value.gateway}}"
+        domain: vm.stylite.de
+      customization:
+        domain: vm.stylite.de
+        hwclockUTC: no
+        timezone: 'Europe/Berlin'
+        dns_servers:
+        - 9.9.9.9
+        - 149.112.112.112
+    with_dict:
+      - "{{ vms }}"
+    register: deploy

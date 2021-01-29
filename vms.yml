@@ -1,0 +1,64 @@
+vms:
+   turn1:
+     vmname:  bonis-turn1
+     template: ubuntu-20.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.31
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 2048
+     cpus: 2
+   turn2:
+     vmname:  bonis-turn2
+     template: ubuntu-20.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.32
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 2048
+     cpus: 2
+   bonis-video:
+     vmname:  bonis-video
+     template: ubuntu-18.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.20
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 8192
+     cpus: 6
+   bonis-bbb1:
+     vmname:  bonis-bbb1
+     template: ubuntu-16.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.21
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 16384
+     cpus: 10
+   bonis-bbb2:
+     vmname:  bonis-bbb2
+     template: ubuntu-16.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.22
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 16384
+     cpus: 10
+   bonis-bbb3:
+     vmname:  bonis-bbb3
+     template: ubuntu-16.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.23
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 16384
+     cpus: 10
+   bonis-monitoring:
+     vmname:  bonis-monitoring
+     template: ubuntu-20.04-amd64
+     netname: NET-194.59.156
+     ip:      194.59.156.39
+     netmask: 255.255.255.0
+     gateway: 194.59.156.1
+     mem: 4096
+     cpus: 4

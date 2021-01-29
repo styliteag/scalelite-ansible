@@ -27,3 +27,12 @@ monitoring_github_client_id: wbonis
 monitoring_github_client_secret:  "{{ vault_monitoring_github_client_secret }}"
 
 turn_secret: "{{ vault_turn_secret }}"
+
+vcenter_hostname: "{{ vault_vcenter_hostname }}"
+vcenter_username: "{{ vault_vcenter_username }}"
+vcenter_password: "{{ vault_vcenter_password }}"
+vcenter_ubuntu_template: ubuntu-20.04-amd64
+vcenter_datastore: poolRED01-NFS-esx01
+vcenter_folder: 2meet/BBB
+vcenter_datacenter: StyliteDC
+vcenter_host: 10.40.4.11
