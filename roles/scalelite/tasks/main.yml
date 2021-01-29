@@ -17,7 +17,9 @@
   git:
     repo: https://github.com/blindsidenetworks/scalelite.git
     dest: /var/www/scalelite
-    version: b49c803e6db62cabed3fa49796f6e8917d222bfb
+    #version: b49c803e6db62cabed3fa49796f6e8917d222bfb #v.1.0.6
+    #version: 38da12cbe857844723cb64d614c6f8d55364d7d0 # v1.0.8
+    version: v1.0.8
   notify: restart scalelite
 
 

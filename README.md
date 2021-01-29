@@ -1,5 +1,6 @@
 # a13-ansible
 
+Ansible playbook for a bigbluebutton cluster for multiple schools. A13 because internal codename was Apollo 13 ;) 
 
 ### Prepare
 
