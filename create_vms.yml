@@ -2,6 +2,7 @@
 
 - name: Create a VM all VMs
   hosts: localhost
+  strategy: free
   connection: local
   vars_files:
   - vms.yml
