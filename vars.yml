@@ -1,4 +1,7 @@
 ---
+
+bbb_domain: bonis.info
+
 users:
   - { name: 'wbonis', sshkeys: 'https://github.com/wbonis.keys' }
 
@@ -6,7 +9,7 @@ letsencrypt_email: wb@stylite.de
 
 mail_admin:
   { server: 'mail.stylite.eu', port: '25', domain: 'stylite.de',
-    user: '{{ vault_mail_admin_user }}"', auth: 'plain', starttls: 'false', sender: 'noreply@stylite.de' }
+    user: '{{ vault_mail_admin_user }}', auth: 'plain', starttls: 'false', sender: 'noreply@stylite.de' }
 
 mail_admin_password: "{{ vault_mail_admin_password }}"
 greenlight_key_base: "{{ vault_greenlight_key_base }}"
@@ -17,7 +20,7 @@ greenlight_admin_user: "{{ vault_greenlight_admin_user }}"
 greenlight_admin_email: "{{ vault_greenlight_admin_email }}"
 greenlight_admin_password: "{{ vault_greenlight_admin_password }}"
 
-scalelite_loadbalancer_url: "https://video.bonis.info/bigbluebutton/"
+scalelite_loadbalancer_url: "https://video.{{ bbb_domain }}/bigbluebutton/"
 scalelite_loadbalancer_secret:  "{{ vault_scalelite_loadbalancer_secret }}"
 
 monitoring_grafana_admin_password: "{{ vault_monitoring_grafana_admin_password }}"

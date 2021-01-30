@@ -175,8 +175,8 @@
     - frontend
     - greenlight
   vars:
-    nginx_domain_name: "video.bonis.info"
-    nginx_redirect_alias: "video.bonis.info"
+    nginx_domain_name: "video.{{ bbb_domain }}"
+    nginx_redirect_alias: "video.{{ bbb_domain }}"
     lb_url: "{{ scalelite_loadbalancer_url }}"
     lb_secret: "{{ scalelite_loadbalancer_secret }}"
     redis_port: 6379
@@ -221,7 +221,7 @@
   vars_files:
     - vars.yml
   vars:
-    nginx_domain_name: mon.bonis.info
+    nginx_domain_name: mon.{{ bbb_domain }}
     prometheus_targets:
       node:
       - targets:
@@ -262,8 +262,8 @@
             replacement:   '$1'
     grafana_address: 127.0.0.1
     grafana_port: 3001
-    grafana_url: "https://mon.bonis.info"
-    grafana_domain: "mon.bonis.info"
+    grafana_url: "https://mon.{{ bbb_domain }}"
+    grafana_domain: "mon.{{ bbb_domain }}"
     grafana_database:
       type: postgres
       host: 127.0.0.1:5432
