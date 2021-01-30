@@ -20,6 +20,15 @@
     update_cache: true
     state: present
 
+- name: Create ZeroSSL/LE Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /etc/letsencrypt/live
+    - /etc/letsencrypt/archive
+    - /etc/letsencrypt/keys
+
 - name: Ensure ZeroSSL/LE Directories are owned by ssl-cert group
   file:
     path: "{{ item }}"
