@@ -4,6 +4,9 @@
 # exit with non-zero status after issuing an appropriate message if
 # it wants to stop the commit.
 
+# Use This Script:
+# git config core.hooksPath ./git_hooks
+
 # Unset variables produce errors
 set -u
 
